@@ -1,0 +1,76 @@
+/* 基本スタイル */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #FFD700; /* 明るい黄色の背景 */
+  margin: 0;
+  padding: 0;
+  text-align: center; /* ロゴを中央に配置 */
+}
+
+.logo {
+  margin-top: 20px; /* 上部に少し余白を設ける */
+}
+
+.logo img {
+  width: 120px; /* ロゴの幅を小さく調整 */
+  height: auto; /* 縦横比を保つ */
+}
+
+/* Q&Aコンテナ */
+.qa-container {
+  max-width: 600px; /* 全体の最大幅を少し小さく */
+  margin: 20px auto; /* 上下左右の中央に配置 */
+  padding: 0 20px;
+  text-align: left; /* Q&A部分を左寄せに戻す */
+}
+
+.qa-item {
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* 質問部分のスタイル */
+.question {
+  cursor: pointer; /* 質問部分にカーソルを合わせた際に、クリック可能であることを示す */
+  background-color: #f0f0f0; /* 軽い背景色でボタンのように見せる */
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 0; /* 角をなくしてボタンのように */
+  width: 94%;
+  display: block;
+  text-align: left; /* 質問部分は左寄せ */
+}
+
+/* 答えをデフォルトで非表示 */
+.answer {
+  display: none;
+}
+
+/* hidden クラスを外すと表示される */
+.answer.hidden {
+  display: block;
+  padding-top: 10px;
+}
+
+/* スマホ用スタイル */
+@media (max-width: 600px) {
+  .qa-container {
+    padding: 10px; /* スマホでは少しだけ余白を持たせる */
+    margin: 0 10px; /* 左右に少し余白を入れる */
+  }
+
+  .qa-item {
+    margin: 10px 0;  /* 上下の余白のみ確保し、左右には少し余白を持たせる */
+    padding: 15px;
+    border-radius: 5px; /* ボーダーの丸みを少しだけ保つ */
+  }
+
+  .question {
+    background-color: #fff; /* 背景を白にして見やすくする */
+    border-radius: 5px; /* 質問部分も少し角を丸くする */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 軽い影をつけてボタンのように */
+  }
+}
